@@ -28,6 +28,8 @@ Link:https://github.com/carlk3/no-OS-FatFS-SD-SPI-RPi-Pico/tree/dev_sdio
    
    -library.json
    
+Camera and SDcard tested and conneted per link
+
 3. BMP Format.
 Author :Ilya Siganov.
 
@@ -51,7 +53,7 @@ Make sure to have at the same levels these folders to obtain a correct .uf2 form
 
 4. Image-graph
 
-The analysis of the liquids in matlab adapted it for image .bmp 324 x 324.
+The analysis of the liquids in matlab adapted it for image .bmp 324 x 324 (8 bits).
 
   -main_test_images
   
