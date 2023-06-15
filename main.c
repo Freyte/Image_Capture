@@ -19,7 +19,7 @@
 #define COMPRESSION 0
 #define NUM_COLORS 256
 #define IMPORTANT_COLORS 0
-#define BITS_PER_PIXEL 8
+#define BITS_PER_PIXEL 24
 #define BITS_PER_BYTE 8
 #define BYTES_PER_PIXEL BITS_PER_PIXEL / BITS_PER_BYTE 
 
@@ -46,6 +46,10 @@ typedef struct BMPHeader_t_ { // Total: 54 bytes
     uint32_t num_colors; // Number of colors
     uint32_t important_colors; // Important colors
 } BMPHeader_t;
+
+static int getPadding(const BMPHeader_t* header) {
+    return (4 - (header->width_px * BYTES_PER_PIXEL) % 4) % 4;
+}
 
 // Define custom palette
 typedef struct RGBColor_t {
@@ -80,7 +84,9 @@ void SaveBMP(const uint8_t* image_buf, const char* filename) {
     header.y_resolution_ppm = 0;
     header.num_colors = NUM_COLORS;
     header.important_colors = IMPORTANT_COLORS;
-
+    
+    int padding = getPadding(&header);
+    
     //Write header
     fr = f_open(&fil, filename, FA_CREATE_ALWAYS | FA_WRITE);
     if (FR_OK != fr && FR_EXIST != fr)
@@ -95,15 +101,25 @@ void SaveBMP(const uint8_t* image_buf, const char* filename) {
         uint8_t rgb[4]={i,i,i,0};
         f_write(&fil,rgb, sizeof(rgb), &bytes_written);
     }          
-
+    
+    uint32_t padding_bytes = 0;
+    
     //Write the data into the file
     for (int y = HEIGHT - 1; y >= 0; y--) {
         for (int x = WIDTH - 1; x >= 0; x--) {  
-                   const uint8_t* pixel = &image_buf[x * BYTES_PER_PIXEL + y * WIDTH * BYTES_PER_PIXEL];
+                   const uint8_t* pixel = &image_buf[x * BYTES_PER_PIXEL/3 + y * WIDTH * BYTES_PER_PIXEL/3];
+            f_write(&fil, pixel, sizeof(uint8_t), &bytes_written);
+            f_write(&fil, pixel, sizeof(uint8_t), &bytes_written);
             f_write(&fil, pixel, sizeof(uint8_t), &bytes_written);
         }
-     } 
     
+     if (padding > 0) {
+            padding_bytes = padding;
+            if (f_write(&fil, &padding_bytes, padding, &bytes_written) != FR_OK) {
+                printf("f_write padding failed\n");
+            }
+        }     
+    }
    fr = f_close(&fil); // Close the file
     if (FR_OK != fr) {
         printf("f_close error", FRESULT_str(fr), fr);
