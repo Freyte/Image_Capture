@@ -1,18 +1,18 @@
 # Image_Capture
-Raspberry Pi Pico &amp; Arducam Image Acquisition
-Author: Freyra Sanchez
+Raspberry Pi Pico &amp; Arducam Image Acquisition.
+Author: Freyra Sanchez.  School:ÉCOLE D’INGÉNIEURS ESTIA  Intership:ESTIA RECHERCHE
 
-1. Arducam
+1. Arducam.
 Link:https://github.com/ArduCAM/RPI-Pico-Cam/tree/master/rp2040_hm01b0
 
-  Libraries
+  Libraries.
   
     -arducam
     
     -image.pio
     
-2. File systems and MicroSDcard
-Author : Carl J Kugler III
+2. File systems and MicroSDcard.
+Author : Carl J Kugler III.
 
 Link:https://github.com/carlk3/no-OS-FatFS-SD-SPI-RPi-Pico/tree/dev_sdio
 
@@ -28,8 +28,8 @@ Link:https://github.com/carlk3/no-OS-FatFS-SD-SPI-RPi-Pico/tree/dev_sdio
    
    -library.json
    
-3. BMP Format
-Author :Ilya Siganov
+3. BMP Format.
+Author :Ilya Siganov.
 
 Link:https://gist.github.com/senior-sigan/67645671ff8c4d0c88599fb3ee41308b
 
@@ -51,10 +51,13 @@ Make sure to have at the same levels these folders to obtain a correct .uf2 form
 
 4. Image-graph
 
-The analysis of the liquids in matlab adapted it for image .bmp 324 x 324
+The analysis of the liquids in matlab adapted it for image .bmp 324 x 324.
 
   -main_test_images
   
   -test_seule_images_3_bandes_2023_03_22
   
-  -The codegen is test_seule_images_3_bandes_2023_03_22 convert to C++.
+   -The codegen is test_seule_images_3_bandes_2023_03_22 convert to C++.
+   
+   -main_analysis has a partial traslation of matlab to C.
+  
