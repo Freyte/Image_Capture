@@ -41,6 +41,8 @@ The BMP header is based on:
 
 -https://en.wikipedia.org/wiki/BMP_file_format
 
+-http://paulbourke.net/dataformats/bitmaps/#:~:text=8%20bit%20indexed%20colour&text=As%20with%208%20bit%20grey,such%20a%20colour%20indexing%20system
+
 Main.c
 
 The camera takes and processes directly the buffer to BMP format and generates the image.bmp (8bits) Grey scales.
