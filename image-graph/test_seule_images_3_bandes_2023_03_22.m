@@ -108,7 +108,7 @@ indice_emul1_Bas=(Max_Hist_Bas-Min_Hist_Bas)/Mean_Hist_Bas;
 indice_emul2_Bas=(Mean_Hist_Bas-Min_Hist_Bas)/Mean_Hist_Bas;
 
 figure(1)
-subplot(1,5,1:3); imshow(double(I_init)/levels);
+subplot(1,5,1:3); imshow(I_init, map);
 
 
 filename2=filename; filename2(9)=' '; filename2(18)=' ';
