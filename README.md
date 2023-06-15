@@ -28,6 +28,7 @@ Link:https://github.com/carlk3/no-OS-FatFS-SD-SPI-RPi-Pico/tree/dev_sdio
    
    -library.json
    
+   -http://elm-chan.org/fsw/ff/doc/open.html
 Camera and SDcard tested and conneted per link
 
 3. BMP Format.
