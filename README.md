@@ -13,6 +13,7 @@ Link:https://github.com/ArduCAM/RPI-Pico-Cam/tree/master/rp2040_hm01b0
     
 2. File systems and MicroSDcard
 Author : Carl J Kugler III
+
 Link:https://github.com/carlk3/no-OS-FatFS-SD-SPI-RPi-Pico/tree/dev_sdio
 
   Libraries and .c
@@ -29,6 +30,7 @@ Link:https://github.com/carlk3/no-OS-FatFS-SD-SPI-RPi-Pico/tree/dev_sdio
    
 3. BMP Format
 Author :Ilya Siganov
+
 Link:https://gist.github.com/senior-sigan/67645671ff8c4d0c88599fb3ee41308b
 
 The BMP header is based on:
@@ -46,3 +48,13 @@ Make sure to have at the same levels these folders to generate correcly the .uf2
 -pico_sdk
 
 -pico-examples
+
+4. Image-graph
+
+It is the analysis the liquids adapted it for image .bmp 324 x 324
+
+  -main_test_images
+  
+  -test_seule_images_3_bandes_2023_03_22
+  
+The codegen is test_seule_images_3_bandes_2023_03_22 convert to C++.
