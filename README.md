@@ -41,9 +41,9 @@ The BMP header is based on:
 
 Main.c
 
-The camera takes and processes directly the buffer to BMP format and generate the image.bmp (8bits) Grey scales.
+The camera takes and processes directly the buffer to BMP format and generates the image.bmp (8bits) Grey scales.
 
-Make sure to have at the same levels these folders to generate correcly the .uf2 format.
+Make sure to have at the same levels these folders to obtain a correct .uf2 format.
 
 -pico_sdk
 
@@ -51,10 +51,10 @@ Make sure to have at the same levels these folders to generate correcly the .uf2
 
 4. Image-graph
 
-It is the analysis the liquids adapted it for image .bmp 324 x 324
+The analysis of the liquids in matlab adapted it for image .bmp 324 x 324
 
   -main_test_images
   
   -test_seule_images_3_bandes_2023_03_22
   
-The codegen is test_seule_images_3_bandes_2023_03_22 convert to C++.
+  -The codegen is test_seule_images_3_bandes_2023_03_22 convert to C++.
