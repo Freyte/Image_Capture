@@ -1,7 +1,7 @@
 # Image_Capture
 Raspberry Pi Pico &amp; Arducam Image Acquisition
 
-/*Master brach*/
+/*Master*/
 
 Contents the main.c that generates an imagen.bmp (8 bits) 324*324 and the matlab code for the liquid analysis.
 
