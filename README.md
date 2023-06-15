@@ -1,6 +1,6 @@
 # Image_Capture
 Raspberry Pi Pico &amp; Arducam Image Acquisition.
-Author: Freyra Sanchez.  School:ÉCOLE D’INGÉNIEURS ESTIA  Intership:ESTIA RECHERCHE
+Author: Freyra Sanchez.  School: ÉCOLE D’INGÉNIEURS ESTIA  Intership:ESTIA RECHERCHE
 
 1. Arducam.
 Link:https://github.com/ArduCAM/RPI-Pico-Cam/tree/master/rp2040_hm01b0
