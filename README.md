@@ -3,8 +3,8 @@ Raspberry Pi Pico &amp; Arducam Image Acquisition
 Author: Freyra Sanchez
 
 1. Arducam
-Link:https://github.com/ArduCAM/RPI-Pico-Cam/tree/master/rp2040_hm01b0
-  Libraries
+Link:https://github.com/ArduCAM/RPI-Pico-Cam/tree/master/rp2040_hm01b0\n
+  Libraries\n
     -arducam
     -image.pio
 2. File systems and MicroSDcard
